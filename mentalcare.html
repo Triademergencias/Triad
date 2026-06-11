@@ -168,6 +168,44 @@ header {
   .modulo { padding: 22px; gap: 16px; flex-direction: column; }
 }
 
+/* ── MENTORES ── */
+.mentores {
+  background: var(--bg-dark);
+  border-top: 1px solid rgba(255,255,255,0.06);
+  padding: 70px 48px;
+}
+.mentores-inner { max-width: 1080px; margin: 0 auto; }
+.mentores-head { text-align: center; margin-bottom: 48px; }
+.mentores-head .label { font-family: 'Barlow Condensed', sans-serif; font-size: 13px; font-weight: 700; letter-spacing: 4px; text-transform: uppercase; color: var(--orange); margin-bottom: 10px; }
+.mentores-head h2 { font-family: 'Barlow Condensed', sans-serif; font-size: clamp(30px,4vw,44px); font-weight: 900; text-transform: uppercase; line-height: 1; }
+.mentores-head p { font-size: 15px; color: var(--gray); margin-top: 12px; max-width: 600px; margin-left: auto; margin-right: auto; line-height: 1.6; }
+
+.mentores-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 24px; }
+
+.mentor {
+  background: rgba(255,255,255,0.03);
+  border: 1px solid rgba(255,255,255,0.08);
+  border-radius: 12px; overflow: hidden;
+  transition: border-color .25s, transform .25s;
+}
+.mentor:hover { border-color: var(--orange); transform: translateY(-6px); }
+.mentor-photo { width: 100%; aspect-ratio: 5/6; object-fit: cover; object-position: center 30%; display: block; }
+.mentor-body { padding: 24px; }
+.mentor-name { font-family: 'Barlow Condensed', sans-serif; font-size: 24px; font-weight: 800; text-transform: uppercase; margin-bottom: 4px; line-height: 1; }
+.mentor-role { font-size: 13px; font-weight: 600; color: var(--orange); margin-bottom: 14px; }
+.mentor-bio { font-size: 14px; color: var(--gray); line-height: 1.55; }
+.mentor-tag {
+  display: inline-flex; align-items: center; gap: 6px;
+  background: rgba(244,121,32,0.1); border: 1px solid rgba(244,121,32,0.25);
+  border-radius: 100px; padding: 5px 12px; margin-top: 14px;
+  font-size: 11px; font-weight: 700; letter-spacing: .5px; text-transform: uppercase; color: var(--orange);
+}
+
+@media(max-width: 920px) {
+  .mentores { padding: 50px 20px; }
+  .mentores-grid { grid-template-columns: 1fr; max-width: 360px; margin: 0 auto; }
+}
+
 @keyframes pulse { 0%,100%{opacity:1;transform:scale(1)} 50%{opacity:.5;transform:scale(1.4)} }
 
 @media(max-width: 920px) {
@@ -315,6 +353,51 @@ header {
       </div>
     </div>
 
+  </div>
+</section>
+
+<!-- MENTORES -->
+<section class="mentores">
+  <div class="mentores-inner">
+    <div class="mentores-head">
+      <div class="label">Quem vai te ensinar</div>
+      <h2>Seus Mentores</h2>
+      <p>Você aprende com profissionais que vivem a urgência na prática. Os três são instrutores de emergências psiquiátricas do SAMU — experiência real na linha de frente do cuidado.</p>
+    </div>
+
+    <div class="mentores-grid">
+
+      <div class="mentor">
+        <img src="img/mentor-luana.jpg" alt="Luana Franco Bordoni" class="mentor-photo">
+        <div class="mentor-body">
+          <div class="mentor-name">Luana Franco Bordoni</div>
+          <div class="mentor-role">Médica</div>
+          <div class="mentor-bio">Especialista em Medicina de Família e Comunidade, pós-graduada em Urgência e Emergência. Instrutora do curso de emergências psiquiátricas do SAMU.</div>
+          <span class="mentor-tag">Instrutora SAMU</span>
+        </div>
+      </div>
+
+      <div class="mentor">
+        <img src="img/mentor-adriana.jpg" alt="Adriana Carvalho" class="mentor-photo">
+        <div class="mentor-body">
+          <div class="mentor-name">Adriana Carvalho</div>
+          <div class="mentor-role">Enfermeira</div>
+          <div class="mentor-bio">Especialista em Saúde Mental e Terapia Intensiva, docente em saúde. Instrutora do curso de emergências psiquiátricas do SAMU.</div>
+          <span class="mentor-tag">Instrutora SAMU</span>
+        </div>
+      </div>
+
+      <div class="mentor">
+        <img src="img/mentor-gelton.jpg" alt="Gelton Costa" class="mentor-photo">
+        <div class="mentor-body">
+          <div class="mentor-name">Gelton Costa</div>
+          <div class="mentor-role">Enfermeiro</div>
+          <div class="mentor-bio">Técnico motociclista e rádio operador do SAMU Salvador, especialista em Urgência e Emergência. Instrutor do curso de emergências psiquiátricas do SAMU Salvador.</div>
+          <span class="mentor-tag">Instrutor SAMU</span>
+        </div>
+      </div>
+
+    </div>
   </div>
 </section>
 

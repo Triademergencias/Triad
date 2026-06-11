@@ -1,23 +1,6 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
 <head>
-  <!-- Meta Pixel Code -->
-<script>
-!function(f,b,e,v,n,t,s)
-{if(f.fbq)return;n=f.fbq=function(){n.callMethod?
-n.callMethod.apply(n,arguments):n.queue.push(arguments)};
-if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';
-n.queue=[];t=b.createElement(e);t.async=!0;
-t.src=v;s=b.getElementsByTagName(e)[0];
-s.parentNode.insertBefore(t,s)}(window, document,'script',
-'https://connect.facebook.net/en_US/fbevents.js');
-fbq('init', '1504586714730341');
-fbq('track', 'PageView');
-</script>
-<noscript><img height="1" width="1" style="display:none"
-src="https://www.facebook.com/tr?id=1504586714730341&ev=PageView&noscript=1"
-/></noscript>
-<!-- End Meta Pixel Code -->
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Inscrição · TRIAD MentalCare — Curso Presencial</title>
@@ -79,6 +62,9 @@ header {
 .banner h2 { font-family: 'Barlow Condensed', sans-serif; font-size: clamp(36px,5vw,56px); font-weight: 900; text-transform: uppercase; line-height: .95; }
 .banner h2 span { color: var(--orange); }
 .banner p { font-size: 16px; color: var(--gray); margin-top: 12px; max-width: 600px; }
+.banner-promise { font-family: 'Barlow Condensed', sans-serif; font-size: clamp(22px,3vw,30px) !important; font-weight: 700; color: #fff !important; line-height: 1.25; margin-top: 18px !important; max-width: 680px !important; }
+.banner-promise::before { content: '“'; color: var(--orange); font-weight: 900; }
+.banner-promise::after { content: '”'; color: var(--orange); font-weight: 900; }
 
 .wrap { max-width: 1200px; margin: 0 auto; padding: 48px; }
 .grid { display: grid; grid-template-columns: 380px 1fr; gap: 32px; align-items: start; }
@@ -147,6 +133,41 @@ header {
 .back-link { display: inline-flex; align-items: center; gap: 8px; color: var(--gray); text-decoration: none; font-size: 13px; margin-bottom: 24px; transition: color .2s; }
 .back-link:hover { color: var(--orange); }
 
+/* ── MÓDULOS DETALHADOS ── */
+.modulos {
+  background: linear-gradient(180deg, #0d1628 0%, #0a1220 100%);
+  border-top: 1px solid rgba(244,121,32,0.15);
+  padding: 70px 48px;
+}
+.modulos-inner { max-width: 1000px; margin: 0 auto; }
+.modulos-head { text-align: center; margin-bottom: 48px; }
+.modulos-head .label { font-family: 'Barlow Condensed', sans-serif; font-size: 13px; font-weight: 700; letter-spacing: 4px; text-transform: uppercase; color: var(--orange); margin-bottom: 10px; }
+.modulos-head h2 { font-family: 'Barlow Condensed', sans-serif; font-size: clamp(30px,4vw,44px); font-weight: 900; text-transform: uppercase; line-height: 1; }
+.modulos-head p { font-size: 15px; color: var(--gray); margin-top: 12px; max-width: 560px; margin-left: auto; margin-right: auto; line-height: 1.6; }
+
+.modulo {
+  display: flex; gap: 24px; align-items: flex-start;
+  background: rgba(255,255,255,0.03);
+  border: 1px solid rgba(255,255,255,0.08);
+  border-left: 3px solid var(--orange);
+  border-radius: 10px; padding: 28px 32px; margin-bottom: 18px;
+  transition: border-color .2s, transform .2s;
+}
+.modulo:hover { border-color: rgba(244,121,32,0.4); transform: translateX(4px); }
+.modulo-num {
+  flex-shrink: 0; width: 52px; height: 52px; border-radius: 12px;
+  background: rgba(244,121,32,0.12); border: 1px solid rgba(244,121,32,0.3);
+  display: flex; align-items: center; justify-content: center;
+  font-family: 'Barlow Condensed', sans-serif; font-size: 26px; font-weight: 900; color: var(--orange);
+}
+.modulo-content h3 { font-family: 'Barlow Condensed', sans-serif; font-size: 23px; font-weight: 800; text-transform: uppercase; margin-bottom: 8px; letter-spacing: .5px; }
+.modulo-content p { font-size: 15px; color: var(--gray); line-height: 1.6; }
+
+@media(max-width: 920px) {
+  .modulos { padding: 50px 20px; }
+  .modulo { padding: 22px; gap: 16px; flex-direction: column; }
+}
+
 @keyframes pulse { 0%,100%{opacity:1;transform:scale(1)} 50%{opacity:.5;transform:scale(1.4)} }
 
 @media(max-width: 920px) {
@@ -176,7 +197,8 @@ header {
   <div class="banner-inner">
     <div class="banner-badge"><span class="banner-dot"></span>Vagas limitadas — Curso Presencial</div>
     <h2>TRIAD <span>MentalCare</span></h2>
-    <p>Manejo de crise em saúde mental com abordagem técnica e humanizada. Garanta sua vaga no curso presencial.</p>
+    <p class="banner-promise">Em um dia, do medo de errar à segurança de quem conduz a crise com técnica e humanidade.</p>
+    <p>Durante 8 horas presenciais de imersão prática e simulação real, você deixa de evitar o paciente em crise e passa a comandar a cena com protocolo, comunicação terapêutica e contenção humanizada.</p>
   </div>
 </div>
 
@@ -243,6 +265,58 @@ header {
 
   </div>
 </div>
+
+<!-- MÓDULOS DETALHADOS -->
+<section class="modulos">
+  <div class="modulos-inner">
+    <div class="modulos-head">
+      <div class="label">Conteúdo programático</div>
+      <h2>O que você vai dominar</h2>
+      <p>Cinco módulos práticos que transformam a teoria em ação real. Cada etapa é construída para você sair pronto para conduzir a crise com segurança.</p>
+    </div>
+
+    <div class="modulo">
+      <div class="modulo-num">01</div>
+      <div class="modulo-content">
+        <h3>Reconhecimento de crise psíquica aguda</h3>
+        <p>Aprenda a identificar rapidamente os sinais de uma crise em saúde mental — agitação, surto psicótico, risco de auto e heteroagressão. Saber reconhecer o que está acontecendo é o primeiro passo para agir com segurança e no tempo certo.</p>
+      </div>
+    </div>
+
+    <div class="modulo">
+      <div class="modulo-num">02</div>
+      <div class="modulo-content">
+        <h3>Comunicação terapêutica em emergências</h3>
+        <p>Domine as técnicas de comunicação que acalmam, criam vínculo e reduzem a tensão da cena. A forma como você fala com o paciente em crise pode desescalar a situação antes que ela se agrave — uma das ferramentas mais poderosas do atendimento.</p>
+      </div>
+    </div>
+
+    <div class="modulo">
+      <div class="modulo-num">03</div>
+      <div class="modulo-content">
+        <h3>Manejo seguro e contenção humanizada</h3>
+        <p>Entenda quando e como aplicar a contenção de forma segura, ética e humanizada — protegendo o paciente, a equipe e você. Técnicas que equilibram firmeza e respeito, sempre priorizando a dignidade de quem está em sofrimento.</p>
+      </div>
+    </div>
+
+    <div class="modulo">
+      <div class="modulo-num">04</div>
+      <div class="modulo-content">
+        <h3>Primeiros socorros psicológicos</h3>
+        <p>Aprenda a oferecer o suporte emocional inicial a quem passa por um momento de crise ou trauma. Acolhimento estruturado que estabiliza a pessoa e a prepara para os próximos cuidados, com base em protocolos reconhecidos.</p>
+      </div>
+    </div>
+
+    <div class="modulo">
+      <div class="modulo-num">05</div>
+      <div class="modulo-content">
+        <h3>Acionamento da rede de saúde mental</h3>
+        <p>Saiba para onde e como encaminhar o paciente após a estabilização. Conhecer a rede de saúde mental (CAPS, SAMU, retaguarda hospitalar) garante a continuidade do cuidado e fecha o ciclo do atendimento com responsabilidade.</p>
+      </div>
+    </div>
+
+  </div>
+</section>
 
 </body>
 </html>
